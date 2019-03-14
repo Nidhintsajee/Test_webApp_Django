@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>signup</title>
+</head>
+<body>
+<h1>Signup</h1>
+<form action="{% url 'signup_url' %}" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+	<input type="text" name="first_name" placeholder="Enter first_name" required=""><br>
+	<input type="text" name="last_name" placeholder="Enter last_name" ><br>
+	<input type="number" name="phone_number" placeholder="Enter phone_number" required=""><br>
+	<input type="email" name="email" placeholder="Enter email" required=""><br>
+	<input type="date" name="dob" required=""><br>
+	<input type="file" name="profile_image" required=""><br>
+	<input type="password" name="password" placeholder="Enter password" required=""><br>
+	<input type="submit">
+</form>
+<a href="{% url 'login_url' %}">login</a>
+
+</body>
+</html>
